@@ -1,12 +1,37 @@
-# React + Vite
+# User Profile Card Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application that fetches a list of user profiles from an API and displays them as reusable, styled cards.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fetches a list of 5 random users from a public API.
+- Displays the user data (name, email, and profile picture) in a clean, card-like format.
+- Handles different UI states, including loading and error messages.
+- Uses a reusable component (`UserProfileCard`) to display each user.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Vite:** A modern and fast build tool for React.
+- **React (`useState`, `useEffect`):** For managing the component's state and side effects.
+- **`async/await`:** For handling asynchronous data fetching.
+- **`fetch` API:** To make network requests to the user data API.
+- **Component-Based Architecture:** The project is structured with a parent `App` component and a reusable child component.
+- **Conditional Rendering:** The UI dynamically changes based on `isLoading` and `error` states.
+- **`.map()` Method:** The project iterates over an array of user data to render a list of components.
+
+## API
+
+This project uses the [Random User Generator API](https://randomuser.me/) to get the user profile data.
+
+## How to Run Locally
+
+1.  Clone the repository:
+    `git clone https://github.com/YOUR_USERNAME/vite-user-profile-cards.git`
+2.  Navigate to the project directory:
+    `cd vite-user-profile-cards`
+3.  Install the dependencies:
+    `npm install`
+4.  Start the development server:
+    `npm run dev`
+
+The application will be available at `http://localhost:5173`.
